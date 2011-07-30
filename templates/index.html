@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewVoice</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='styles/styles.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section id="title">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand navbar-light">
+                <a href="{{url_for('home')}}" class="navbar-brand">NewVoice</a>
+                <ul class="navbar-nav ms-auto">
+                    {% if session['user'] %}
+                    <li class="navbar-item">
+                        <a class="btn btn-secondary" href="{{url_for('logout')}}">Sign Out</a>
+                    </li>
+                    {% else %}
+                    <li class="navbar-item">
+                        <a class="btn btn-secondary" href="{{url_for('register')}}">Register</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="btn btn-secondary" href="{{url_for('login')}}">Sign In</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+            <div class="row">
+                <div class="title-txt col-lg-6 quote">
+                    <h1>"SIGN ARE TO EYES WHAT WORDS ARE TO EARS"</h1>
+                    <a class="btn btn-secondary btn-lg" id="tryButton" href="{{url_for('camera')}}">Try Now</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="{{url_for('static',filename='img/SLAIT_in_your_hand2.jpg')}}" alt="phone-mockup" class="title-img">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="features">
+        <div class="row">
+            <div class="feature-box col-lg-4">
+                <img src="{{url_for('static',filename='img/camera.png')}}" alt="camera.png" class="feature-img">
+                <h3>Sign To Speech</h3>
+                <p>Realtime, Speech to Speech using your webcam</p>
+            </div>
+            <div class="feature-box col-lg-4  image">
+                <img src="{{url_for('static',filename='img/easy-to-use.png')}}" alt="easy-to-use.png" class="feature-img">
+                <h3>Easy to use</h3>
+                <p>User friendly interface</p><br><br>
+            </div>
+            <div class="feature-box col-lg-4">
+                <img src="{{url_for('static',filename='img/all-platform.png')}}" alt="all-platform.png" class="feature-img">
+                <h3>Available for all devices</h3>
+                <p>Can be used on smartphones, tablets and desktops</p>
+            </div>
+        </div>
+    </section>
+    <section id="challenge">
+        <div class="container-fluid">
+            <h1>The challenge is huge</h1>
+            <p><em>How to improve communication of deaf and hearing people?</em></p>
+            <div class="row">
+                <div class="feature-box col-lg-6 fact">
+                    <h1>466,000,000</h1><br>
+                    <p><em>Number of people with hearing loss in the world</em></p>
+                </div>
+                <div class="feature-box col-lg-6 fact">
+                    <h1>70,000,000</h1><br>
+                    <p><em>Total Number of ASL Speakers in the world</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

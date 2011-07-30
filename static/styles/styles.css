@@ -1,0 +1,104 @@
+*{
+    font-family:'Montserrat'
+}
+
+#title {
+    background-color: #47B5FF;
+}
+
+.navbar {
+    padding: 2%;
+    color: #03045E;
+}
+
+.navbar-item {
+    padding: 0 5px;
+}
+
+h1 {
+    margin: 10% 10% 1% 10%;
+    text-align: center;
+}
+
+.title-txt {
+    text-align: center;
+}
+
+.title-img {
+    width: 60%;
+    margin: 2rem 4.5rem
+}
+
+#tryButton{
+    margin-top: 2%;
+}
+
+#features{
+    padding: 0 5% 0 5%;
+}
+.feature-box{
+    text-align: center;
+    padding: 10%;
+}
+
+p{
+    text-align: center;
+}
+
+.feature-img{
+    width: 10rem;
+}
+
+#challenge {
+    background-color: #06283D;
+    padding: 7%;
+    color: white;
+}
+
+#videoElement {
+    width:90%;
+    height:100%;
+    background-color: #666;
+    margin:2rem;
+}
+
+#inst-btn {
+    margin: 1rem 2rem;
+}
+
+.card {
+    margin: .5rem;
+    padding: 8%; 
+}
+
+.mod {
+    margin: 1rem 0rem 0rem 3rem;
+}
+
+.image {
+    margin-top: 1rem;
+}
+
+.feature-box {
+    text-align: center;
+}
+
+.fact {
+    padding: 0 5% 5% 5%;
+}
+
+.btn {
+    background-color: #03045E;
+}
+
+.navbar-brand {
+    font-weight: 800;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+.quote {
+    margin-top: 3%;
+}
